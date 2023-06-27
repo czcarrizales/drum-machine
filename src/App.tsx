@@ -4,16 +4,17 @@ import "./App.css";
 function App() {
   
   const [display, setDisplay] = useState('')
-  const playAudio = (id) => {
+  const playAudio = (id: string) => {
     setDisplay(id)
-    const sound = document.getElementById(id);
-    sound.play();
+    const sound = document.getElementById(id) as HTMLAudioElement;
+    console.log(sound)
+    sound?.play();
   };
 
-  const detectKeyDown = (e) => {
+  const detectKeyDown = (e: { key: string; }) => {
     
-    const sound = document.getElementById(e.key.toUpperCase())
-    sound.play()
+    const sound = document.getElementById(e.key.toUpperCase()) as HTMLAudioElement
+    sound?.play()
     setDisplay(sound.id)
   }
 
