@@ -1,0 +1,85 @@
+#drum-machine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 500px;
+  background: linear-gradient(177deg, rgb(44, 44, 44) 0%, rgb(18, 18, 18) 100%);
+
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgb(0, 0, 0);
+  border: 3px solid rgb(15, 15, 15);
+}
+
+#website-creator {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
+  font-size: .9rem;
+  color: white;
+}
+
+#display {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(198, 198, 198);
+  font-size: 1.8rem;
+  border-radius: 5px;
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.drum-pad {
+  padding: 2rem;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(16, 16, 16);
+  font-size: 2rem;
+  flex:  0 0 30%;
+  margin: .5rem;
+  animation: glow 25s ease-in-out infinite;
+  border: 1px solid rgb(125, 125, 125);
+}
+
+@keyframes glow {
+  100% {
+    box-shadow: 0 3px 10px red;
+  }
+
+  75% {
+    box-shadow: 0 3px 10px orange;
+  }
+
+  50% {
+    box-shadow: 0 3px 10px blue;
+  }
+
+  25% {
+    box-shadow: 0 3px 10px purple;
+  }
+
+  0% {
+    box-shadow: 0 3px 10px green;
+  }
+}
+
+.drum-pad:hover {
+  cursor: pointer;
+  background-color: rgb(26, 26, 26);
+}
+
+#title {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0;
+}
